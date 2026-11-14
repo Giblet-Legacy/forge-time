@@ -1,0 +1,7 @@
+# requirements.txt — P16 Time (forge-time)
+# Function: runtime dependencies for P16. forge_time.py is standard
+# library only. seal_capsule.py and the tests use P3 Freeze v2 and P7
+# Record v2 (sibling checkouts ../freeze-layer, ../record-layer, with
+# ../envelope-layer and ../sign-layer), which need:
+
+cryptography
