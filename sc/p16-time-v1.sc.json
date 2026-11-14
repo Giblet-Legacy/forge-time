@@ -17,5 +17,10 @@
     "depends": []
   },
   "licence": "MSL-1.0",
-  "signature": null
+  "document_sha256": "77c3a989bb24361716f3fe3b1be628415b68bbfb13d8e695f70d836fd2b44f1f",
+  "signature": {
+    "algorithm": "Ed25519",
+    "key_id": "did:key:z6MkkVnQM4mpSND1jMBLDScpuUFF9BJTMoxYykurXQY89pjn",
+    "value": "214e6ded311637e9479100507bbeed29a5d36b9c64ec109cdeea8308f4d19a3f1ec4b02a3e0f1126297e6e4c2e287de9339ad64634495200a94a3043a3626208"
+  }
 }
