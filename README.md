@@ -16,7 +16,7 @@ Consumed: P17 Mediator; any layer or consumer that writes or checks a
           signed timestamp or an scp_id
 Licence:  MSL-1.0
 Author:   James Gilbert (Giblets Forge)
-Status:   0.0.0-dev — built (SPEC.md 1.0.0), not signed off
+Status:   1.0.0 — frozen 2026-11-14 (SPEC.md 1.0.0), signed off by James
 
 ## Use
 
@@ -30,7 +30,9 @@ Status:   0.0.0-dev — built (SPEC.md 1.0.0), not signed off
 ## The primitive capsule
 
 `sc/p16-time-v1.sc.json` declares this layer and pins SPEC.md's
-SHA-256. It is committed unsigned. To seal it with your key (P3 Freeze
+SHA-256. James sealed it on 2026-11-14 (P3 Freeze v2, key_id
+`did:key:z6MkkVnQM4mpSND1jMBLDScpuUFF9BJTMoxYykurXQY89pjn`,
+the same key as the Legacy ledger). A later capsule is sealed the same way. To seal it with your key (P3 Freeze
 v2, your passphrase-protected `~/.forge/key.pem`, passphrase asked for
 and never stored):
 

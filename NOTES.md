@@ -10,6 +10,9 @@ Function:
 
 - **Q1 — Sign off P16 at 1.0.0?** Built and green on the laptop (8/8).
   Not yet run on the S24. Raised 2026-11-14. Owner: James.
+  **Resolved 2026-11-14 — James: "tested on y phone ok", then "yes freeze 16 and 17".**
+  Frozen at 1.0.0. Ran on the S24 before sealing; after sealing the capsule
+  test was changed to require the seal (8/8 on the laptop).
 - **Q2 — Does the scp_id rule belong in P16?** It is here because it
   came with the time rules in the foundation's canon.py and James said
   yes to "the time and SCP-id rules" in one layer. It is a Declare (P1)

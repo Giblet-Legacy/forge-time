@@ -134,7 +134,11 @@ def test_capsule_names_this_spec():
     assert forge_time.is_iso_utc(capsule["created"])
     assert capsule["declaration"]["layer"] == "P16" and capsule["declaration"]["module"] == "forge_time.py"
     assert capsule["declaration"]["spec_sha256"] == spec_sha
-    assert capsule["signature"] is None
+    # Sealed by the owner (2026-11-14): P3 accepts it under its own key_id.
+    import envelope_v2
+    import freeze_v2
+    pub = envelope_v2.did_key_decode(capsule["signature"]["key_id"])
+    assert freeze_v2.verify_frozen_capsule(capsule, pub)
 
 
 # 8. test_seal_capsule_verifies_under_p3
