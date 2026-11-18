@@ -11,11 +11,20 @@ Function:
 
 ### Good
 
-- (none)
+- 1.0.1 (2026-11-18, not frozen): no tie to the-full-stack. James: "the
+  forge stack was for reference only and not meant to be a layer
+  involved in the legacy program." `SPEC_V1_0_1.md` withdraws SPEC §5's
+  agreement check against `forge_core`. `test_forge_time_v1_0_1.py` is
+  the 1.0.0 suite with test 6 replaced by
+  `test_never_reaches_the_full_stack`. The 1.0.0 test file is kept
+  byte-identical in `archive/1.0.0/`, and a new `pytest.ini` skips
+  `archive/`. `forge_time.py` and `seal_capsule.py` are untouched. 8/8.
 
 ### Bad
 
-- (none)
+- The sealed capsule still says `derived_from` the-full-stack and
+  `inherits` forge-stack/governance-v6. It is signed history and stays
+  as it is.
 
 ### Ugly
 

@@ -43,6 +43,7 @@ and never stored):
     python -m pytest -q
 
 Needs the sibling checkouts ../envelope-layer, ../sign-layer,
-../freeze-layer and ../record-layer (for seal_capsule.py). If
-../the-full-stack is checked out too, P16 is also checked against the
-foundation's forge_core.
+../freeze-layer and ../record-layer (for seal_capsule.py).
+
+Since 1.0.1 (2026-11-18) P16 is not checked against the-full-stack's
+forge_core. That repository is reference only (SPEC_V1_0_1.md).
