@@ -19,6 +19,10 @@
     "supersedes": "forge-stack/primitive/p16-time-v1"
   },
   "licence": "MSL-1.0",
-  "document_sha256": null,
-  "signature": null
+  "document_sha256": "bb991dc18d5bbf38c1cedb0d8225710fba34d47f350e547604031882d1261406",
+  "signature": {
+    "algorithm": "Ed25519",
+    "key_id": "did:key:z6MkkVnQM4mpSND1jMBLDScpuUFF9BJTMoxYykurXQY89pjn",
+    "value": "9a61d6bf31afa4d580e7bad0577767903c4592fcb6b86688d8de1615c75c42b63b24be5b8e91b59587330931bcac6c886c5d12ce30c85df50b87543f29acad03"
+  }
 }
