@@ -1,0 +1,24 @@
+{
+  "scp_id": "forge-stack/primitive/p16-time-v2",
+  "scp_version": "1.2.0",
+  "created": "2026-11-18T22:00:00Z",
+  "inherits": null,
+  "declaration": {
+    "type": "primitive_layer",
+    "layer": "P16",
+    "name": "Time",
+    "repo": "Giblet-Legacy/forge-time",
+    "module": "forge_time.py",
+    "spec": "SPEC_V1_0_1.md",
+    "spec_version": "1.0.1",
+    "spec_sha256": "cd85007d6daaab04609981564ad71c0c685f086d9cb366713f4475ad09b81cd3",
+    "intent": "The one timestamp format the stack signs (ISO 8601 UTC to the second, literal Z) and the scp_id rule, matched against the whole string.",
+    "depends": [],
+    "base_spec": "SPEC.md",
+    "base_spec_sha256": "cb0e88f6d2421f8ba42c25f90c01d4b9b007e87cf0ce8bbd622bab035bda664c",
+    "supersedes": "forge-stack/primitive/p16-time-v1"
+  },
+  "licence": "MSL-1.0",
+  "document_sha256": null,
+  "signature": null
+}

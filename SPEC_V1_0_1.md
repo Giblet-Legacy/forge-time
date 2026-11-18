@@ -38,12 +38,12 @@ rule now.
   signed: they are history.
 - The 1.0.0 test file is kept byte-identical at
   `archive/1.0.0/test_forge_time.py`. The 1.0.1 suite is
-  `test_forge_time_v1_0_1.py`.
+  `test_forge_time_at_v1_0_1.py`.
 
 ---
 
 ## Document control
 
 - **SPEC 1.0.1** — 2026-11-18, by the VS Code AI on James's word ("yes
-  in the order you stated", removing the the-full-stack ties). Not
-  signed; 1.0.1 is not frozen until James says so.
+  in the order you stated", removing the the-full-stack ties).
+  Frozen 2026-11-18 (James: "freeze"); pinned by sc/p16-time-v2.sc.json.

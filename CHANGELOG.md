@@ -11,14 +11,34 @@ Function:
 
 ### Good
 
-- 1.0.1 (2026-11-18, not frozen): no tie to the-full-stack. James: "the
+- (none)
+
+### Bad
+
+- (none)
+
+### Ugly
+
+- (none)
+
+## [v1.0.1] — 2026-11-18 — FROZEN
+
+### Good
+
+- Frozen at 1.0.1 (James: "freeze"). No tie to the-full-stack. James: "the
   forge stack was for reference only and not meant to be a layer
   involved in the legacy program." `SPEC_V1_0_1.md` withdraws SPEC §5's
-  agreement check against `forge_core`. `test_forge_time_v1_0_1.py` is
+  agreement check against `forge_core`. `test_forge_time_at_v1_0_1.py` is
   the 1.0.0 suite with test 6 replaced by
   `test_never_reaches_the_full_stack`. The 1.0.0 test file is kept
   byte-identical in `archive/1.0.0/`, and a new `pytest.ini` skips
   `archive/`. `forge_time.py` and `seal_capsule.py` are untouched. 8/8.
+
+- `sc/p16-time-v2.sc.json`: the 1.0.1 capsule, pinning SPEC_V1_0_1.md
+  and SPEC.md by hash, superseding p16-time-v1, `inherits` null. It is
+  unsigned until James seals it (`python seal_capsule.py
+  sc/p16-time-v2.sc.json`). A test seal with a throwaway key verifies
+  under P3 v2. Test 9 checks the pins. 9/9.
 
 ### Bad
 

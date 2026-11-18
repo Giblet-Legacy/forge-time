@@ -1,5 +1,5 @@
 """
-test_forge_time_v1_0_1.py — P16 Time test suite, 1.0.1
+test_forge_time_at_v1_0_1.py — P16 Time test suite, 1.0.1
 
 Function:
     Executable expression of SPEC.md 1.0.0 as changed by SPEC_V1_0_1.md.
@@ -17,6 +17,7 @@ Functions in this file (pytest-collected):
     6. test_never_reaches_the_full_stack
     7. test_capsule_names_this_spec
     8. test_seal_capsule_verifies_under_p3
+    9. test_capsule_v2_pins_both_specs
 
 Helpers:
     9. VALID_TS, INVALID_TS, VALID_IDS, INVALID_IDS — the tables
@@ -141,3 +142,18 @@ def test_seal_capsule_verifies_under_p3(tmp_path):
     assert freeze_v2.verify_frozen_capsule(sealed, key.public_key())
     assert sealed["declaration"] == capsule["declaration"]
     assert b"\r" not in path.read_bytes()
+
+
+# 9. test_capsule_v2_pins_both_specs
+def test_capsule_v2_pins_both_specs():
+    """The 1.0.1 capsule names SPEC_V1_0_1.md and SPEC.md by hash, supersedes v1, inherits nothing."""
+    with open(os.path.join(HERE, "sc", "p16-time-v2.sc.json"), encoding="utf-8") as f:
+        cap = json.load(f)
+    d = cap["declaration"]
+    for name, key in (("SPEC_V1_0_1.md", "spec_sha256"), ("SPEC.md", "base_spec_sha256")):
+        with open(os.path.join(HERE, name), "rb") as f:
+            assert d[key] == hashlib.sha256(f.read()).hexdigest(), name
+    assert (cap["scp_id"], d["spec_version"], d["supersedes"], cap["inherits"]) ==         ("forge-stack/primitive/p16-time-v2", "1.0.1", "forge-stack/primitive/p16-time-v1", None)
+    assert forge_time.is_iso_utc(cap["created"]) and "derived_from" not in d
+    sig = cap["signature"]
+    assert sig is None or (isinstance(sig, dict) and sig.get("algorithm") == "Ed25519")
